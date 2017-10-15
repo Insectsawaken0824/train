@@ -21,7 +21,6 @@ public class BatchInsertBaseTrainData {
             //停靠站详情
             String stationInfo = split[0];
             String trainNumb = split[1];
-
         }
     }
 
