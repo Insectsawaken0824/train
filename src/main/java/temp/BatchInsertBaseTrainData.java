@@ -17,7 +17,7 @@ public class BatchInsertBaseTrainData {
     public static final String url = "jdbc:mysql://127.0.0.1/train?useUnicode=true&characterEncoding=UTF-8";
     public static final String name = "com.mysql.jdbc.Driver";
     public static final String user = "root";
-    public static final String password = "root";
+    public static final String password = "123456";
 
     public static Connection conn = null;
     public static PreparedStatement pst = null;
@@ -26,7 +26,7 @@ public class BatchInsertBaseTrainData {
         Class.forName(name);
         conn = DriverManager.getConnection(url, user, password);
         conn.setAutoCommit(false);
-        insertTrainDataToMysql("F:\\train\\Data.txt");
+        insertTrainDataToMysql("D:\\train\\Data.txt");
         pst.close();
         conn.close();
     }
