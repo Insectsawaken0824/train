@@ -66,3 +66,18 @@ INSERT INTO train.formal_train_number_stations_info (train_number, sequence_numb
   FROM train.train_number_stations_info
   GROUP BY train_number, sequence_number, stations_name, distance, total_distance, arrive_time, leave_time, runtime,
     total_runtime, other_day;
+
+# 城市信息库
+DROP TABLE train.check_city_county_info;
+CREATE TABLE train.check_city_county_info(
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  province_name VARCHAR(20) NOT NULL COMMENT '省' ,
+  province_id INT COMMENT '省id' ,
+  city_name VARCHAR(20) NOT NULL COMMENT '市' ,
+  city_id INT COMMENT '市id' ,
+  county_name VARCHAR(20) NOT NULL COMMENT '区\县' ,
+  county_id INT COMMENT '区\县id' ,
+  bak1 VARCHAR(255),
+  bak2 VARCHAR(255),
+  bak3 VARCHAR(255)
+)CHARACTER SET utf8 COLLATE utf8_general_ci;

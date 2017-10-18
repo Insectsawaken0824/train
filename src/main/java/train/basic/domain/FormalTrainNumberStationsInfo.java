@@ -6,6 +6,7 @@ import javax.persistence.Id;
 
 /**
  * Created by zhao on 2017/10/17.
+ * 车站信息Do
  */
 @Entity
 public class FormalTrainNumberStationsInfo {
